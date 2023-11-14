@@ -29,7 +29,7 @@
         "pretest": "npm run compile-tests && npm run compile && npm run lint",
         "lint": "eslint src --ext ts",
         "test": "node ./out/test/runTest.js",
-        "compile-main-dependencies": "npm run --prefix main-project-source build",
+        "compile-main-dependencies": "VITE_BASE=/src/dist/ npm run --prefix main-project-source build",
         "link-main-dependencies": "ln -sf ./../main-project-source/dist/ ./src/"
     },
     "devDependencies": {
