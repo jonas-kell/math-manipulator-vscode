@@ -19,8 +19,11 @@ export function activate(context: vscode.ExtensionContext) {
         // Display a message box to the user
         // vscode.window.showInformationMessage("Hello World from math-manipulator!");
 
+        console.log(context.extensionUri);
+
         const panel = vscode.window.createWebviewPanel("catCoding", "", vscode.ViewColumn.One, {
             enableScripts: true,
+            localResourceRoots: [vscode.Uri.joinPath(context.extensionUri, "dist")],
         });
 
         const updateWebview = () => {
