@@ -21,9 +21,9 @@
     },
     "scripts": {
         "vscode:prepublish": "npm run package",
-        "compile": "webpack",
-        "watch": "webpack --watch",
-        "package": "webpack --mode production --devtool hidden-source-map",
+        "compile": "npm run compile-main-dependencies && npm run link-main-dependencies && webpack",
+        "watch": "npm run compile-main-dependencies && npm run link-main-dependencies && webpack --watch",
+        "package": "npm run compile-main-dependencies && npm run link-main-dependencies && webpack --mode production --devtool hidden-source-map",
         "compile-tests": "tsc -p . --outDir out",
         "watch-tests": "tsc -p . -w --outDir out",
         "pretest": "npm run compile-tests && npm run compile && npm run lint",
