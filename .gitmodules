@@ -1,0 +1,3 @@
+[submodule "main-project-source"]
+	path = main-project-source
+	url = https://github.com/jonas-kell/math-manipulator
