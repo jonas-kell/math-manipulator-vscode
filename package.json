@@ -1,13 +1,15 @@
 {
     "name": "math-manipulator",
     "repository": {
+        "type": "git",
         "url": "https://github.com/jonas-kell/math-manipulator-vscode"
     },
     "displayName": "Math Manipulator",
     "description": "Wrapper extension that provides support for the `math-manipulator` project directly inside Visual Studio Code",
     "version": "1.0.0",
+    "license": "MIT",
     "engines": {
-        "vscode": "^1.84.0"
+        "vscode": "^1.74.0"
     },
     "categories": [
         "Other"
@@ -15,10 +17,25 @@
     "activationEvents": [],
     "main": "./dist/extension.js",
     "contributes": {
+        "customEditors": [
+            {
+                "viewType": "math-manipulator.document-editor",
+                "displayName": "Math Manipulator Document",
+                "selector": [
+                    {
+                        "filenamePattern": "*.mmdata"
+                    }
+                ]
+            }
+        ],
         "commands": [
             {
+                "command": "math-manipulator.new-document",
+                "title": "Create a new Math Manipulator Document"
+            },
+            {
                 "command": "math-manipulator.open",
-                "title": "Open Math Manipulator"
+                "title": "Open Math Manipulator (Non Storage Interactive Session)"
             }
         ]
     },
@@ -33,7 +50,7 @@
         "lint": "eslint src --ext ts",
         "test": "node ./out/test/runTest.js",
         "prepare-workspace": "npm install && npm run compile-main-dependencies && npm run link-main-dependencies",
-        "compile-main-dependencies": "git submodule update --recursive --init && VITE_BASE=./ npm run --prefix main-project-source build",
+        "compile-main-dependencies": "git submodule update --recursive --init && VITE_BASE=./ VITE_PERMANENCE=vscode npm run --prefix main-project-source build",
         "link-main-dependencies": "ln -sf ./../main-project-source/dist/ ./src/"
     },
     "devDependencies": {
@@ -44,12 +61,9 @@
         "@typescript-eslint/parser": "^6.9.0",
         "@vscode/test-electron": "^2.3.6",
         "copy-webpack-plugin": "^11.0.0",
-        "css-loader": "^6.8.1",
         "eslint": "^8.52.0",
         "glob": "^10.3.10",
-        "html-loader": "^4.2.0",
         "mocha": "^10.2.0",
-        "style-loader": "^3.3.3",
         "ts-loader": "^9.5.0",
         "typescript": "^5.2.2",
         "webpack": "^5.89.0",
