@@ -22,3 +22,33 @@ For example if there is an image subfolder under your extension project workspac
 <!-- ## Known Issues
 
 Calling out known issues can help limit users opening duplicate issues against your extension. -->
+
+## Manual installation
+
+### Latest Version
+
+For building the latest version of the extension, run:
+
+```cmd
+npm install -g @vscode/vsce      # Unless already installed (requires node & npm)
+vsce package
+```
+
+Then right-click on `math-manipulator-X.X.X.vsix` and choose `Install Extension VSIX`.
+
+### Specific Version
+
+For building a specific version of the `math-manipulator` main dependency, you need to first check it out in the submodule.
+
+```cmd
+vsce package    # make sure everything is at least once run
+```
+
+Then remove the part `git submodule update --recursive --init && ` from the `prepare-workspace`command in `package.json` (otherwise the packaging will revert to the latest version before compiling).
+
+```cmd
+cd main-project-source/
+git checkout VERSIONYOUWANT
+cd ..
+vsce package
+```

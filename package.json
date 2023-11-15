@@ -40,17 +40,18 @@
         ]
     },
     "scripts": {
-        "vscode:prepublish": "npm run package",
+        "vscode:prepublish": "npm run prep-package",
         "compile": "npm run prepare-workspace && webpack",
         "watch": "npm run prepare-workspace && webpack --watch",
-        "package": "npm run prepare-workspace && webpack --mode production --devtool hidden-source-map",
+        "package": "webpack --mode production --devtool hidden-source-map",
+        "prep-package": "npm run prepare-workspace && npm run package",
         "compile-tests": "tsc -p . --outDir out",
         "watch-tests": "tsc -p . -w --outDir out",
         "pretest": "npm run compile-tests && npm run compile && npm run lint",
         "lint": "eslint src --ext ts",
         "test": "node ./out/test/runTest.js",
-        "prepare-workspace": "npm install && npm run compile-main-dependencies && npm run link-main-dependencies",
-        "compile-main-dependencies": "git submodule update --recursive --init && VITE_BASE=./ VITE_PERMANENCE=vscode npm run --prefix main-project-source build",
+        "prepare-workspace": "git submodule update --recursive --init && npm install && npm run compile-main-dependencies && npm run link-main-dependencies",
+        "compile-main-dependencies": "VITE_BASE=./ VITE_PERMANENCE=vscode npm run --prefix main-project-source build",
         "link-main-dependencies": "ln -sf ./../main-project-source/dist/ ./src/"
     },
     "devDependencies": {
