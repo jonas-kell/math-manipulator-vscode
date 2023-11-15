@@ -6,7 +6,9 @@ This extension bundles the project `math-manipulator` (https://github.com/jonas-
 
 Contributes the command `math-manipulator.open` that opens a local version of the math manipulator project.
 
-TODO
+Contributes the command `math-manipulator.new-document` that initializes a new `.mmdata` file.
+
+Provides a custom editor for `.mmdata` files, with permanent storage to the file enabled.
 
 <!--
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
