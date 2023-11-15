@@ -24,7 +24,7 @@ Object.keys(manifest).forEach((key: string) => {
     }
 });
 
-export async function getWebviewHtml(webview: vscode.Webview, extensionUri: vscode.Uri) {
+export function getWebviewHtml(webview: vscode.Webview, extensionUri: vscode.Uri) {
     return (
         `
 <head>

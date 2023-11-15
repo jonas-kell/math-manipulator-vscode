@@ -1,8 +1,11 @@
 {
     "name": "math-manipulator",
-    "displayName": "math-manipulator",
+    "repository": {
+        "url": "https://github.com/jonas-kell/math-manipulator-vscode"
+    },
+    "displayName": "Math Manipulator",
     "description": "Wrapper extension that provides support for the `math-manipulator` project directly inside Visual Studio Code",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.84.0"
     },
@@ -14,8 +17,8 @@
     "contributes": {
         "commands": [
             {
-                "command": "math-manipulator.helloWorld",
-                "title": "Hello World"
+                "command": "math-manipulator.open",
+                "title": "Open Math Manipulator"
             }
         ]
     },
