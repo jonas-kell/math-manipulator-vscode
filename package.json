@@ -21,15 +21,16 @@
     },
     "scripts": {
         "vscode:prepublish": "npm run package",
-        "compile": "npm run compile-main-dependencies && npm run link-main-dependencies && webpack",
-        "watch": "npm run compile-main-dependencies && npm run link-main-dependencies && webpack --watch",
-        "package": "npm run compile-main-dependencies && npm run link-main-dependencies && webpack --mode production --devtool hidden-source-map",
+        "compile": "npm run prepare-workspace && webpack",
+        "watch": "npm run prepare-workspace && webpack --watch",
+        "package": "npm run prepare-workspace && webpack --mode production --devtool hidden-source-map",
         "compile-tests": "tsc -p . --outDir out",
         "watch-tests": "tsc -p . -w --outDir out",
         "pretest": "npm run compile-tests && npm run compile && npm run lint",
         "lint": "eslint src --ext ts",
         "test": "node ./out/test/runTest.js",
-        "compile-main-dependencies": "VITE_BASE=/src/dist/ npm run --prefix main-project-source build",
+        "prepare-workspace": "npm install && npm run compile-main-dependencies && npm run link-main-dependencies",
+        "compile-main-dependencies": "git submodule update --recursive --init && VITE_BASE=./ npm run --prefix main-project-source build",
         "link-main-dependencies": "ln -sf ./../main-project-source/dist/ ./src/"
     },
     "devDependencies": {
@@ -39,6 +40,7 @@
         "@typescript-eslint/eslint-plugin": "^6.9.0",
         "@typescript-eslint/parser": "^6.9.0",
         "@vscode/test-electron": "^2.3.6",
+        "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.8.1",
         "eslint": "^8.52.0",
         "glob": "^10.3.10",

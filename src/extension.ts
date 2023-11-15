@@ -1,8 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
-
-import htmlTemplate from "./loader";
+import { getWebviewHtml } from "./loader";
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -17,18 +16,15 @@ export function activate(context: vscode.ExtensionContext) {
     let disposable = vscode.commands.registerCommand("math-manipulator.helloWorld", () => {
         // The code you place here will be executed every time your command is executed
         // Display a message box to the user
-        // vscode.window.showInformationMessage("Hello World from math-manipulator!");
-
-        console.log(context.extensionUri);
 
         const panel = vscode.window.createWebviewPanel("catCoding", "", vscode.ViewColumn.One, {
             enableScripts: true,
             localResourceRoots: [vscode.Uri.joinPath(context.extensionUri, "dist")],
         });
 
-        const updateWebview = () => {
+        const updateWebview = async () => {
             panel.title = "Cat Coding";
-            panel.webview.html = getWebviewContent();
+            panel.webview.html = await getWebviewHtml(panel.webview, context.extensionUri);
         };
         updateWebview();
 
@@ -47,7 +43,3 @@ export function activate(context: vscode.ExtensionContext) {
 
 // This method is called when your extension is deactivated
 export function deactivate() {}
-
-function getWebviewContent() {
-    return htmlTemplate;
-}
