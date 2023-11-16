@@ -42,6 +42,41 @@ export function getWebviewHtml(webview: vscode.Webview, extensionUri: vscode.Uri
             })
             .join() +
         `
+    <style>
+        body {
+            font-weight: var(--vscode-editor-font-weight);
+            font-size: var(--vscode-editor-font-size);
+            font-family: var(--vscode-editor-font-family);
+        }
+        textarea {
+            border-color: var(--vscode-input-border);
+            color: var(--vscode-input-foreground);
+            background-color: var(--vscode-input-background);
+        }
+        textarea:disabled {
+            color: var(--vscode-disabledForeground);
+        }
+        input {
+            border-color: var(--vscode-input-border);
+            color: var(--vscode-input-foreground);
+            background-color: var(--vscode-input-background);
+        }
+        input:disabled {
+            color: var(--vscode-disabledForeground);
+        }
+        button {
+            color: var(--vscode-button-foreground);
+            background-color: var(--vscode-button-background);
+            border-color: var(--vscode-button-background);
+        }
+        button:hover:not(:disabled) {
+            background-color: var(--vscode-button-hoverBackground);
+            border-color: var(--vscode-button-hoverBackground);
+        }
+        button:disabled {
+            color: var(--vscode-disabledForeground);
+        }
+    </style>
 </head>
 <body>
         <div id="app"></div>
