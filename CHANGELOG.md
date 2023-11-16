@@ -13,3 +13,8 @@ All notable changes to the "math-manipulator" extension will be documented in th
 -   Create new document command
 -   Basic session (no permanent storage)
 -   File-synchronized session that allows live editing of `.mmdata` files
+
+## [1.1.0] - 2023-11-16
+
+-   Styling/Theming
+-   Logo

@@ -1,6 +1,7 @@
-# math-manipulator-vscode
+# Math Manipulator
 
 This extension bundles the project `math-manipulator` (https://github.com/jonas-kell/math-manipulator) for use inside Visual Studio Code.
+As the project is already 100% browser-compatible (hosted on https://jonas-kell.github.io/math-manipulator/), this only adds read and write functionality for convenient file IO and vscode-theme-styling.
 
 ## Features
 
