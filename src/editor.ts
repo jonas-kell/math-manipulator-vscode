@@ -72,6 +72,29 @@ export class MathManipulatorEditorProvider implements vscode.CustomTextEditorPro
         const changeDocumentSubscription = vscode.workspace.onDidChangeTextDocument((e) => {
             if (e.document.uri.toString() === document.uri.toString()) {
                 if (!editorInstanceStuff.isSelfEditing) {
+                    const newState = this.getDocumentAsJson(document);
+                    let changeLoaded = false;
+                    Object.keys(this.documentState).forEach((oldKey) => {
+                        if (
+                            newState[oldKey] === null ||
+                            newState[oldKey] === undefined ||
+                            this.documentState[oldKey] === null ||
+                            this.documentState[oldKey] === undefined
+                        ) {
+                            delete this.documentState[oldKey];
+                            changeLoaded = true;
+                        }
+                    });
+                    Object.keys(newState).forEach((newKey) => {
+                        if (this.documentState[newKey] !== newState[newKey]) {
+                            this.documentState[newKey] = newState[newKey];
+                            changeLoaded = true;
+                        }
+                    });
+                    if (changeLoaded) {
+                        console.log("External changes to local document state detected");
+                    }
+
                     updateWebview();
                 }
             }
