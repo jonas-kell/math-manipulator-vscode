@@ -4,9 +4,16 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
-## [Unreleased]
+## [1.1.1] - 2023-11-17
 
--   Initial configuration
+-   [Main Repo Version: 6309a84](https://github.com/jonas-kell/math-manipulator/tree/6309a84b0d6bf43a5c2b3a4f4653a8953684b591)
+-   Store header color
+
+## [1.1.0] - 2023-11-17
+
+-   [Main Repo Version: 6309a84](https://github.com/jonas-kell/math-manipulator/tree/6309a84b0d6bf43a5c2b3a4f4653a8953684b591)
+-   Styling/Theming
+-   Logo
 
 ## [1.0.0] - 2023-11-15
 
@@ -15,13 +22,6 @@ All notable changes to the "math-manipulator" extension will be documented in th
 -   Basic session (no permanent storage)
 -   File-synchronized session that allows live editing of `.mmdata` files
 
-## [1.1.0] - 2023-11-17
+## [Unreleased]
 
--   [Main Repo Version: 6309a84](https://github.com/jonas-kell/math-manipulator/tree/6309a84b0d6bf43a5c2b3a4f4653a8953684b591)
--   Styling/Theming
--   Logo
-
-## [1.1.1] - 2023-11-17
-
--   [Main Repo Version: 6309a84](https://github.com/jonas-kell/math-manipulator/tree/6309a84b0d6bf43a5c2b3a4f4653a8953684b591)
--   Store header color
+-   Initial configuration
