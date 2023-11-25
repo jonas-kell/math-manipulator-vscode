@@ -7,7 +7,7 @@
     "publisher": "jonas-kell",
     "displayName": "Math Manipulator",
     "description": "Wrapper extension that provides support for the `math-manipulator` project directly inside Visual Studio Code",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "license": "MIT",
     "engines": {
         "vscode": "^1.74.0"
@@ -43,6 +43,10 @@
             {
                 "command": "math-manipulator.open",
                 "title": "Open Math Manipulator (Non Storage Interactive Session)"
+            },
+            {
+                "command": "math-manipulator.help",
+                "title": "Math Manipulator interactive Help-Playground"
             }
         ]
     },
@@ -58,7 +62,7 @@
         "lint": "eslint src --ext ts",
         "test": "node ./out/test/runTest.js",
         "prepare-workspace": "git submodule update --recursive --init && npm install && npm run compile-main-dependencies && npm run link-main-dependencies",
-        "compile-main-dependencies": "VITE_BASE=./ VITE_PERMANENCE=vscode npm run --prefix main-project-source build",
+        "compile-main-dependencies": "VITE_BASE=./ VITE_PERMANENCE=vscode VITE_RENDER_ROUTER_LINKS=0 npm run --prefix main-project-source build",
         "link-main-dependencies": "ln -sf ./../main-project-source/dist/ ./src/"
     },
     "devDependencies": {

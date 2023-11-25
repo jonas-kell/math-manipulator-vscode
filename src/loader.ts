@@ -24,11 +24,18 @@ Object.keys(manifest).forEach((key: string) => {
     }
 });
 
-export function getWebviewHtml(webview: vscode.Webview, extensionUri: vscode.Uri) {
+export function getWebviewHtml(
+    webview: vscode.Webview,
+    extensionUri: vscode.Uri,
+    mainMode: "main" | "help" | "empty" | "stored"
+) {
     return (
         `
 <head>
     <meta charset="UTF-8" />
+    <script>
+        window.mainMode = "${mainMode}";
+    </script>
     <script type="module" crossorigin src="${webview.asWebviewUri(
         vscode.Uri.joinPath(extensionUri, "dist", jsPathSegment)
     )}"></script>

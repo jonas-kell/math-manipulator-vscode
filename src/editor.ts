@@ -50,7 +50,7 @@ export class MathManipulatorEditorProvider implements vscode.CustomTextEditorPro
             enableScripts: true,
             localResourceRoots: [vscode.Uri.joinPath(this.context.extensionUri, "dist")],
         };
-        webviewPanel.webview.html = getWebviewHtml(webviewPanel.webview, this.context.extensionUri);
+        webviewPanel.webview.html = getWebviewHtml(webviewPanel.webview, this.context.extensionUri, "stored");
 
         // hold state locally
         this.documentState = this.getDocumentAsJson(document);

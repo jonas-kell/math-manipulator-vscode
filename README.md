@@ -7,6 +7,8 @@ As the project is already 100% browser-compatible (hosted on https://jonas-kell.
 
 Contributes the command `math-manipulator.open` that opens a local version of the math manipulator project.
 
+Contributes the command `math-manipulator.help` that provides an interactive Help-Playground.
+
 Contributes the command `math-manipulator.new-document` that initializes a new `.mmdata` file.
 
 Provides a custom editor for `.mmdata` files, with permanent storage to the file enabled.

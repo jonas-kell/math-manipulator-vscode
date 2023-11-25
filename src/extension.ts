@@ -11,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
     // This line of code will only be executed once when your extension is activated
     console.log('Congratulations, your extension "math-manipulator" is now active!');
 
-    let command = vscode.commands.registerCommand("math-manipulator.open", () => {
+    let openCommand = vscode.commands.registerCommand("math-manipulator.open", () => {
         const panel = vscode.window.createWebviewPanel("math-manipulator.main-editor", "", vscode.ViewColumn.One, {
             enableScripts: true,
             localResourceRoots: [vscode.Uri.joinPath(context.extensionUri, "dist")],
@@ -19,7 +19,28 @@ export function activate(context: vscode.ExtensionContext) {
 
         const updateWebview = () => {
             panel.title = "Math Manipulator";
-            panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri);
+            panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri, "empty");
+        };
+        updateWebview();
+
+        panel.onDidDispose(
+            () => {
+                // When the panel is closed, cancel any future updates to the webview content
+                // TODO
+            },
+            null,
+            context.subscriptions
+        );
+    });
+    let helpCommand = vscode.commands.registerCommand("math-manipulator.help", () => {
+        const panel = vscode.window.createWebviewPanel("math-manipulator.help-editor", "", vscode.ViewColumn.One, {
+            enableScripts: true,
+            localResourceRoots: [vscode.Uri.joinPath(context.extensionUri, "dist")],
+        });
+
+        const updateWebview = () => {
+            panel.title = "MM Help Playground";
+            panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri, "help");
         };
         updateWebview();
 
@@ -33,7 +54,8 @@ export function activate(context: vscode.ExtensionContext) {
         );
     });
 
-    context.subscriptions.push(command);
+    context.subscriptions.push(openCommand);
+    context.subscriptions.push(helpCommand);
     context.subscriptions.push(MathManipulatorEditorProvider.register(context));
 }
 
