@@ -4,6 +4,15 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [1.3.0] - 2023-11-29
+
+-   [Main Repo Version: 43e499](https://github.com/jonas-kell/math-manipulator/tree/43e499db7b189a8b68c786cdba49b9839290b23c)
+-   New features from Main Project
+    -   Macros basic support
+    -   Fixed bugs with variable purging
+    -   Store interaction streamlining and refactoring
+    -   Refactor introduces main config propagation to allow for scoped variables/macros
+
 ## [1.2.1] - 2023-11-26
 
 -   [Main Repo Version: 4c3832b](https://github.com/jonas-kell/math-manipulator/tree/4c3832b22eb6c5c09bee3f3caf674b1f04574d4f)
