@@ -4,6 +4,11 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [1.3.1] - 2023-11-29
+
+-   [Main Repo Version: c87c87](https://github.com/jonas-kell/math-manipulator/tree/c87c87eba7cfdbba3289f5ce784b4a2a2b1e64a1)
+-   Fixed large projects not loading because of uninitialized storage
+
 ## [1.3.0] - 2023-11-29
 
 -   [Main Repo Version: 43e499](https://github.com/jonas-kell/math-manipulator/tree/43e499db7b189a8b68c786cdba49b9839290b23c)
