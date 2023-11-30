@@ -61,6 +61,11 @@ export class MathManipulatorEditorProvider implements vscode.CustomTextEditorPro
                 content: this.documentState,
             });
         };
+        const postAtLeastOneUpdateSent = () => {
+            webviewPanel.webview.postMessage({
+                type: "atLeastOneUpdateSent",
+            });
+        };
 
         // Hook up event handlers so that we can synchronize the webview with the text document.
         //
@@ -118,6 +123,7 @@ export class MathManipulatorEditorProvider implements vscode.CustomTextEditorPro
 
         // initial update
         updateWebview();
+        postAtLeastOneUpdateSent();
     }
 
     /**
