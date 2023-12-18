@@ -27,7 +27,8 @@ Object.keys(manifest).forEach((key: string) => {
 export function getWebviewHtml(
     webview: vscode.Webview,
     extensionUri: vscode.Uri,
-    mainMode: "main" | "help" | "empty" | "stored"
+    mainMode: "main" | "help" | "empty" | "stored",
+    permanenceMode: "session" | "vscode" | "memory"
 ) {
     return (
         `
@@ -35,6 +36,7 @@ export function getWebviewHtml(
     <meta charset="UTF-8" />
     <script>
         window.mainMode = "${mainMode}";
+        window.permanenceMode = "${permanenceMode}";
     </script>
     <script type="module" crossorigin src="${webview.asWebviewUri(
         vscode.Uri.joinPath(extensionUri, "dist", jsPathSegment)

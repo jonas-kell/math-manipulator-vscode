@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         const updateWebview = () => {
             panel.title = "Math Manipulator";
-            panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri, "empty");
+            panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri, "empty", "session");
         };
         updateWebview();
 
@@ -40,7 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         const updateWebview = () => {
             panel.title = "MM Help Playground";
-            panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri, "help");
+            panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri, "help", "memory");
         };
         updateWebview();
 
