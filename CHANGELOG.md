@@ -4,6 +4,14 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [1.4.1] - 2023-12-19
+
+-   [Main Repo Version: 2fdc95](https://github.com/jonas-kell/math-manipulator/tree/2fdc955c2891082093181461919e5e5a3a4b9131)
+-   New features from Main Project
+    -   Import/Export
+        -   Copy Button
+        -   Replace with export/import field
+
 ## [1.4.0] - 2023-12-19
 
 -   [Main Repo Version: c6480d](https://github.com/jonas-kell/math-manipulator/tree/c6480df4e73f13a4a5c0c5020eace1c2bcc504bb)
