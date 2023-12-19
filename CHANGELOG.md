@@ -4,7 +4,18 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
-## [1.3.1] - 2023-12-01
+## [1.4.0] - 2023-12-19
+
+-   [Main Repo Version: c6480d](https://github.com/jonas-kell/math-manipulator/tree/c6480df4e73f13a4a5c0c5020eace1c2bcc504bb)
+-   Fixed interactive playground not loading
+-   New features from Main Project
+    -   Navigation (including keyboard navigation)
+    -   Selection of additional operators
+    -   Delta function evaluation
+    -   Degree of freedom for QM-Operators
+        -   Strings and string-arguments
+
+## [1.3.2] - 2023-12-01
 
 -   [Main Repo Version: a58899](https://github.com/jonas-kell/math-manipulator/tree/a588998abe0214f997ab2d5c256ebfd5310f5aab)
 -   New features from Main Project
