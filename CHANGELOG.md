@@ -4,6 +4,14 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [1.5.1] - 2023-12-20
+
+-   [Main Repo Version: f22648](https://github.com/jonas-kell/math-manipulator/tree/f22648d1328824be03e0f8653fca06587f0cc34e)
+-   FIX IN MAIN PROJECT
+    -   !!! Bosonic Operators had a sign-mistake in their commute return type !!!
+        -   All previous main-repository versions return incorrect results!!
+    -   Defined Macros now get sorted to the correct position
+
 ## [1.5.0] - 2023-12-20
 
 -   [Main Repo Version: 9d16d7](https://github.com/jonas-kell/math-manipulator/tree/9d16d7a4f4d24cf7619049da82d018c76f72a744)
