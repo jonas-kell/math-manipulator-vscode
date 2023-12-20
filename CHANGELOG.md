@@ -4,6 +4,12 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [1.5.0] - 2023-12-20
+
+-   [Main Repo Version: 9d16d7](https://github.com/jonas-kell/math-manipulator/tree/9d16d7a4f4d24cf7619049da82d018c76f72a744)
+-   New features from Main Project
+    -   Macros now support parsing to operators
+
 ## [1.4.2] - 2023-12-20
 
 -   [Main Repo Version: 82ca04](https://github.com/jonas-kell/math-manipulator/tree/82ca04c5d81c6e99f515edd591107c040a3dab5c)
