@@ -4,6 +4,25 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [2.0.0] - 2023-01-13
+
+-   [Main Repo Version: 05dd57](https://github.com/jonas-kell/math-manipulator/tree/05dd5711c1548adfae85df4af18237b4f9ce7567)
+-   Some operator formats in parser and storage have changed. Saves may no longer be compatible
+-   New features from Main Project
+    -   Packing same variables
+    -   Global replacement
+    -   Major loading performance increase
+        -   (and hidden buttons for better visibility)
+    -   Split delta functions locally and globally
+    -   Cancel specified elements from Sums & Products
+    -   Fixed some parsing bugs
+    -   String support and function definition changes
+    -   Massive improvements to the interactive help
+        -   Documented everything
+        -   Search
+        -   Typos fixed
+    -   Brought coverage and tests back to 100%
+
 ## [1.5.1] - 2023-12-20
 
 -   [Main Repo Version: f22648](https://github.com/jonas-kell/math-manipulator/tree/f22648d1328824be03e0f8653fca06587f0cc34e)
