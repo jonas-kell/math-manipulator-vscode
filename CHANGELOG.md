@@ -4,6 +4,12 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [2.0.1] - 2023-01-16
+
+-   [Main Repo Version: 714805](https://github.com/jonas-kell/math-manipulator/tree/714805443e367a0e933e5d5da938f40887f6fe25)
+-   New features from Main Project
+    -   Button to replace all with field input
+
 ## [2.0.0] - 2023-01-13
 
 -   [Main Repo Version: 05dd57](https://github.com/jonas-kell/math-manipulator/tree/05dd5711c1548adfae85df4af18237b4f9ce7567)
