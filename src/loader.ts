@@ -1,4 +1,4 @@
-import manifest from "./dist/manifest.json";
+import manifest from "./dist/.vite/manifest.json";
 import * as vscode from "vscode";
 
 let cssPathSegments = [] as string[];
