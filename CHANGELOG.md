@@ -4,6 +4,12 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [2.1.1] - 2024-05-06
+
+-   [Main Repo Version: c9e209](https://github.com/jonas-kell/math-manipulator/tree/c9e2092f11c87d96fcd98b198c4fc4099651287c)
+-   New features from Main Project
+    -   Distinct function to force delta to eval to 0/1 on variables
+
 ## [2.1.0] - 2024-04-16
 
 -   [Main Repo Version: c2d686](https://github.com/jonas-kell/math-manipulator/tree/c2d686a7d4ef562a048dbe62cbe2412a030280a8)
