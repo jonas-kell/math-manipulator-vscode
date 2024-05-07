@@ -4,6 +4,12 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [2.1.3] - 2024-05-06
+
+-   [Main Repo Version: 3db045](https://github.com/jonas-kell/math-manipulator/tree/3db0459742eebb6858b8f19617b47db0af404435)
+-   New features from Main Project
+    -   Improve group equal elements supports negation
+
 ## [2.1.2] - 2024-05-06
 
 -   [Main Repo Version: 1e1094](https://github.com/jonas-kell/math-manipulator/tree/1e1094c464b2edb412ff514e488930bb24f936a5)
