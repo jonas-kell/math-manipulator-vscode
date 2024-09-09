@@ -4,6 +4,12 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [2.1.4] - 2024-09-09
+
+-   [Main Repo Version: 8d0b26](https://github.com/jonas-kell/math-manipulator/tree/8d0b2656c4769fd9442bd630c2f5b26fa216e793)
+-   New features from Main Project
+    -   Rework Hard-Core-Bosonic Operators to confirm truly to all hard-core rules
+
 ## [2.1.3] - 2024-05-06
 
 -   [Main Repo Version: 3db045](https://github.com/jonas-kell/math-manipulator/tree/3db0459742eebb6858b8f19617b47db0af404435)
