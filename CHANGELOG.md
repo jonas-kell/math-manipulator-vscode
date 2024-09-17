@@ -4,6 +4,12 @@ All notable changes to the "math-manipulator" extension will be documented in th
 
 <!-- Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [3.1.1] - 2024-17-09
+
+-   [Main Repo Version: 640c43](https://github.com/jonas-kell/math-manipulator/tree/640c430a2e9f20797aea620a25ee0e1c0f0e9ca0)
+-   New features from Main Project
+    -   Commutable variable depending container
+
 ## [3.1.0] - 2024-17-09
 
 -   [Main Repo Version: 57aee6](https://github.com/jonas-kell/math-manipulator/tree/57aee68194b909e1dd23015f2a5caf54697d6321)
