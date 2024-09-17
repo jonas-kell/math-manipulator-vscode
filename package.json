@@ -7,7 +7,7 @@
     "publisher": "jonas-kell",
     "displayName": "Math Manipulator",
     "description": "Wrapper extension that provides support for the `math-manipulator` project directly inside Visual Studio Code",
-    "version": "3.0.1",
+    "version": "3.1.0",
     "license": "MIT",
     "engines": {
         "vscode": "^1.74.0"
